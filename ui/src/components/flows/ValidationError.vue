@@ -14,6 +14,7 @@
             popperClass="validation-error-tooltip-popper"
             :placement="tooltipPlacement"
             :showArrow="false"
+            :triggerKeys="[]"
             rawContent
         >
             <template #content>

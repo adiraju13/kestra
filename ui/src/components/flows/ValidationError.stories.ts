@@ -45,6 +45,12 @@ export const ErrorsWithNavigation: Story = {
         await userEvent.click(button)
 
         await expect(args.onActivate).toHaveBeenCalledTimes(2)
+
+        button.focus()
+        await userEvent.keyboard("{Enter}")
+        await userEvent.keyboard(" ")
+
+        await expect(args.onActivate).toHaveBeenCalledTimes(4)
     },
 }
 
